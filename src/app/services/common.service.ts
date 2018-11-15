@@ -6,8 +6,12 @@ export class CommonService {
 
   constructor() {
     this.username = localStorage.getItem('username');
-
-    //   this.localStorage.observe('username')
-    //     .subscribe((value) => this.username = value);
+    // this.localStorage.observe('username').subscribe((value) => this.username = value);
   }
+
+  setUsername(uname: string) {
+    this.username = this.username;
+    localStorage.setItem('username', uname);
+  }
+
 }

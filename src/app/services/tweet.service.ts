@@ -49,7 +49,7 @@ export class TweetService {
 
   join(query: string): Tweet {
     if (!this.commonService.username) {
-      this.commonService.username = UUID.UUID();
+      this.commonService.setUsername(UUID.UUID());
     }
 
     let tweet = this.getTweet(query);
