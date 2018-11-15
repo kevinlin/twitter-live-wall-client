@@ -20,8 +20,10 @@ export class TweetService {
   activeTweet: Tweet;
   featuredTweets = [
     'nodejs',
-    'javascript',
-    'nba'
+    'angular',
+    'nba',
+    'trump',
+    'zuhlke'
   ];
 
   constructor(private commonService: CommonService, private http: HttpClient) {
