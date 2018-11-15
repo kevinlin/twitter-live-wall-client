@@ -1,0 +1,36 @@
+<div class="msg-list " *ngIf="tweetService.activeTweet" #list [scrollTop]="list.scrollHeight">
+
+  <div class="box" *ngFor="let m of tweetService.activeTweet.msgList">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="{{m.pic}}" alt="Image" width="64px" height="64px"/>
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{m.name}}</strong>
+            <small>@{{m.screenname}}</small>
+            <br>
+            {{m.text}}
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <span class="icon is-small"><i class="fa fa-reply"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+            </a>
+            <a class="level-item">
+              <span class="icon is-small"><i class="fa fa-heart"></i></span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </article>
+  </div>
+
+</div>
