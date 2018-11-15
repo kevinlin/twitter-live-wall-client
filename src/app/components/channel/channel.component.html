@@ -1,5 +1,4 @@
 <div class="msg-list " *ngIf="tweetService.activeTweet" #list [scrollTop]="list.scrollHeight">
-
   <div class="box" *ngFor="let m of tweetService.activeTweet.msgList">
     <article class="media">
       <div class="media-left">
@@ -32,5 +31,4 @@
       </div>
     </article>
   </div>
-
 </div>

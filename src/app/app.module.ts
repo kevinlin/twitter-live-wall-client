@@ -2,28 +2,32 @@ import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+
 import {AppComponent} from './app.component';
+import {ChannelComponent} from './components/channel/channel.component';
+import {ChatComponent} from './components/chat/chat.component';
 import {HomeComponent} from './components/home/home.component';
 import {ToolbarComponent} from './components/toolbar/toolbar.component';
-
-import {AppRoutingModule} from './modules/app-routing.module';
-import {TweetModule} from './modules/tweet/tweet.module';
-import {CommonService} from './services/common.service';
+import {StringifyPipe} from './pipes/stringify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ChannelComponent,
+    ChatComponent,
     HomeComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    StringifyPipe,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    TweetModule,
   ],
-  providers: [CommonService],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

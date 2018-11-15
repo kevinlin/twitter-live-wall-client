@@ -4,11 +4,11 @@ import {UUID} from 'angular2-uuid';
 import {BehaviorSubject, Observable} from 'rxjs';
 import * as io from 'socket.io-client';
 
-import {environment} from '../../../../environments/environment';
-import {CommonService} from '../../../services/common.service';
+import {environment} from '../../environments/environment';
 import {Tweet} from '../models/tweet';
+import {CommonService} from './common.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class TweetService {
   socket: any;
 

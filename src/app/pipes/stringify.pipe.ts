@@ -1,7 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({ name: 'stringify' })
-
 export class StringifyPipe implements PipeTransform {
 
   transform(text: any, chars: string = '\\s'): string {

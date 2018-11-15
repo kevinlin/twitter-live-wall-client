@@ -1,17 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from '../components/home/home.component';
+
+import {ChannelComponent} from './components/channel/channel.component';
+import {ChatComponent} from './components/chat/chat.component';
+import {HomeComponent} from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'tweet',
-    loadChildren: 'app/modules/tweet/tweet.module#TweetModule'
-  }
+  { path: 'home', component: HomeComponent },
+  { path: 'tweet', component: ChatComponent, children: [{ path: ':query', component: ChannelComponent }] }
 ];
 
 @NgModule({

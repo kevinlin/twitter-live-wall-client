@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
-import {CommonService} from '../../../../services/common.service';
+import {CommonService} from '../../services/common.service';
 import {TweetService} from '../../services/tweet.service';
 
 @Component({

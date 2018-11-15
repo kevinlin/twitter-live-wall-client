@@ -1,10 +1,9 @@
 import * as rp from 'request-promise';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 
-import {environment} from '../../../../environments/environment';
+import {environment} from '../../environments/environment';
 
 export class Tweet {
-
   socket: any;
   socketConnected$ = new BehaviorSubject<boolean>(false);
 
@@ -17,7 +16,6 @@ export class Tweet {
   totalClients = 0;
 
   constructor(query: string) {
-
     this.socket = io(environment.socket.baseUrl, environment.socket.opts);
     this.socket.on('connect', () => this.socketConnected$.next(true));
     this.socket.on('disconnect', () => this.socketConnected$.next(false));
@@ -36,8 +34,7 @@ export class Tweet {
       }
     });
 
-    this.getqueryStats()
-      .then(res => this.totalClients = res.clientsCount);
+    this.getQueryStats().then(res => this.totalClients = res.clientsCount);
   }
 
   send(msg: string, usr: string) {
@@ -64,8 +61,7 @@ export class Tweet {
     this.socket.emit('leave', { query: this.query });
   }
 
-  getqueryStats(): Promise<any> {
-
+  getQueryStats(): Promise<any> {
     return rp({
       uri: `${environment.api.baseUrl}/room/${this.query}/stats`,
       json: true
