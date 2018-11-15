@@ -32,7 +32,7 @@
     "request-promise": "^4.2.2",
     "rxjs": "^6.3.3",
     "socket.io-client": "^2.1.1",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "^7.0.0",
