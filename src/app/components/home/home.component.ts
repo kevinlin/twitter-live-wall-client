@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
 
   query: string;
 
-  constructor(
-    private commonService: CommonService, private router: Router) {
+  constructor(private commonService: CommonService, private router: Router) {
   }
 
   ngOnInit() {

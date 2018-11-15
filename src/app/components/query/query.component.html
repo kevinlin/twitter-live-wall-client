@@ -1,0 +1,8 @@
+<div class="columns">
+  <div class="column is-9 control">
+    <input (keyup.enter)="join()" [(ngModel)]="query" class="input" type="text">
+  </div>
+  <div class="column is-3 control is-clearfix">
+    <button (click)="join()" class="button is-success is-pulled-right">Query</button>
+  </div>
+</div>

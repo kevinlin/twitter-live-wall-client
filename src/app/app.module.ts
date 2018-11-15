@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {ChannelComponent} from './components/channel/channel.component';
 import {ChatComponent} from './components/chat/chat.component';
 import {HomeComponent} from './components/home/home.component';
+import {QueryComponent} from './components/query/query.component';
 import {ToolbarComponent} from './components/toolbar/toolbar.component';
 import {StringifyPipe} from './pipes/stringify.pipe';
 
@@ -17,6 +18,7 @@ import {StringifyPipe} from './pipes/stringify.pipe';
     ChannelComponent,
     ChatComponent,
     HomeComponent,
+    QueryComponent,
     ToolbarComponent,
     StringifyPipe,
   ],
