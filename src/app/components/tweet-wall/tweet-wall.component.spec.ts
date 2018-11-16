@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ChannelComponent} from './channel.component';
+import {TweetWallComponent} from './tweet-wall.component';
 
-describe('ChannelComponent', () => {
-  let component: ChannelComponent;
-  let fixture: ComponentFixture<ChannelComponent>;
+describe('TweetWallComponent', () => {
+  let component: TweetWallComponent;
+  let fixture: ComponentFixture<TweetWallComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ChannelComponent]
+      declarations: [TweetWallComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChannelComponent);
+    fixture = TestBed.createComponent(TweetWallComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

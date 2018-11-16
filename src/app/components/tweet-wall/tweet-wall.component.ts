@@ -6,11 +6,11 @@ import {TweetService} from '../../services/tweet.service';
 
 @Component({
   selector: 'app-channel',
-  templateUrl: './channel.component.html',
-  styleUrls: ['./channel.component.sass'],
+  templateUrl: './tweet-wall.component.html',
+  styleUrls: ['./tweet-wall.component.sass'],
   moduleId: module.id,
 })
-export class ChannelComponent implements OnInit {
+export class TweetWallComponent implements OnInit {
 
   currentMsg = '';
 

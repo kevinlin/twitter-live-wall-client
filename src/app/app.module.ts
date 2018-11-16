@@ -5,16 +5,16 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
-import {ChannelComponent} from './components/channel/channel.component';
 import {ChatComponent} from './components/chat/chat.component';
 import {QueryComponent} from './components/query/query.component';
 import {ToolbarComponent} from './components/toolbar/toolbar.component';
+import {TweetWallComponent} from './components/tweet-wall/tweet-wall.component';
 import {StringifyPipe} from './pipes/stringify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChannelComponent,
+    TweetWallComponent,
     ChatComponent,
     QueryComponent,
     ToolbarComponent,
