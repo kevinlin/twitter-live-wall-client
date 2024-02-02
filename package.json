@@ -29,7 +29,7 @@
     "bulma": "^0.7.2",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
-    "request-promise": "^4.2.2",
+    "request-promise": "^4.2.6",
     "rxjs": "^6.3.3",
     "socket.io-client": "^2.1.1",
     "zone.js": "^0.8.26"
