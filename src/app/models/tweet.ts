@@ -1,5 +1,5 @@
-import * as rp from 'request-promise';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 import {environment} from '../../environments/environment';
 
@@ -15,7 +15,7 @@ export class Tweet {
   msgList: any[] = [];
   totalClients = 0;
 
-  constructor(query: string) {
+  constructor(query: string, private http: HttpClient) {
     this.socket = io(environment.socket.baseUrl, environment.socket.opts);
     this.socket.on('connect', () => this.socketConnected$.next(true));
     this.socket.on('disconnect', () => this.socketConnected$.next(false));
@@ -62,10 +62,7 @@ export class Tweet {
   }
 
   getQueryStats(): Promise<any> {
-    return rp({
-      uri: `${environment.api.baseUrl}/room/${this.query}/stats`,
-      json: true
-    });
+    return this.http.get(`${environment.api.baseUrl}/room/${this.query}/stats`).toPromise();
   }
 
 }

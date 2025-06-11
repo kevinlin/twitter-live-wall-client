@@ -57,7 +57,7 @@ export class TweetService {
     console.log('joining tweet stream >>', query);
 
     if (!tweet) {
-      tweet = new Tweet(query);
+      tweet = new Tweet(query, this.http);
       this.activeTweets.unshift(tweet);
     }
 

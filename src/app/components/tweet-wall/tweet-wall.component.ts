@@ -7,8 +7,7 @@ import {TweetService} from '../../services/tweet.service';
 @Component({
   selector: 'app-tweet-wall',
   templateUrl: './tweet-wall.component.html',
-  styleUrls: ['./tweet-wall.component.sass'],
-  moduleId: module.id,
+  styleUrls: ['./tweet-wall.component.sass']
 })
 export class TweetWallComponent implements OnInit {
 
